@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Your Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/update.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="bg">
+        <section class="hero">
+            <f-list-headerer class="main-f-list-headerer container">
+                <nav class="container main-nav">
+                    <ul class="nav-list">
+                        <li><a href="/home" class="nav-items">Home</a></li>
+                        <li><a href="/blog" class="nav-items">Blogs</a></li>
+                        <li><a href="/myblogs" class="nav-items">My Blogs</a></li>
+                        <li><a href="#" class="nav-items about-me">About Me</a></li>
+                        <span class="close"><i class='bx bx-x'></i></span>
+                    </ul>
+                    <form action="/logout" method="post"></form>
+                    <a href="/" class="logout"><i class='bx bx-log-out-circle bx-flip-horizontal' style='color:#ffffff'  ></i></a>
+                    </form>
+                    <span class="open"><i class='bx bx-menu btn-open'></i></span>
+                </nav>
+            </f-list-headerer>
+            <div class="hero-content container">
+                <!-- <h1>Hello, I'm Nidhish Vyas</h1>
+                <h4>and this is my portfolio</h4> -->
+            </div>
+        </section> 
+
+        <img src="/images/poster1.png" class="poster" alt="">
+
+        <section class="input blog-container">
+            <form action="/updateblog/<%= blog._id %>" method="POST">
+                <div class="name item">
+                    <label>Full Name</label>
+                    <input type="text" name="fname" required class="text lines2" value="<%= blog.fname %>">
+                </div>
+                <div class="heading item">
+                    <label>Title</label>
+                    <input type="text" name="title" required class="text lines2" value="<%= blog.title %>">
+                </div>
+                <div class="blog item">
+                    <label>Blog Post</label>
+                    <textarea name="blogpost" class="text area" id=""><%= blog.blogpost %></textarea>
+                </div>
+                <div class="submit item">
+                    <button class="sub-btn" type="submit">Update</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <div class="margin"></div>
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <img src="./images/logo.png" alt="" class="logo">
+            
+                <div class="footer-list">
+                    <ul class="links">
+                      <li class="f-list-header">Site Links</li>
+                      <li><a href = "index.ejs">Home</a></li>
+                      <li><a href = "blogs.ejs">Blog</a></li>
+                      <li><a href = "my-blogs.ejs">My Blogs</a></li>
+                      <li><a href = "#">About Me</a></li>
+                    </ul>
+                  
+                    <ul class="links">
+                      <li class="f-list-header">About</li>
+                      <li><a href = "#">Privacy Notice</a></li>
+                      <li><a href = "#">Careers </a></li>
+                    </ul>
+                  
+                    <div class="connect">
+                        <div>
+                            <form action="">
+                                <h3 class="sub-news">Subscribe My Newsletter</h3>
+                                <div class="newsletter">
+                                    <i class='bx bx-envelope'></i>
+                                    <input type="email" placeholder="Enter Email" class="email">
+                                    <button class="sub">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="apps">
+                            <i class='bx bxl-twitter'></i>
+                            <i class='bx bxl-instagram'></i>
+                            <i class='bx bxl-facebook-square'></i>
+                            <h3 class="connect-txt">Connect Me</h3>
+                            <h3>info@email.com</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">Copyright ©2021 All rights reserved by Blackout 3.0</p>
+        </div>
+    </footer>
+
+    <script src = "script/script.js"></script>
+</body>
+</html>

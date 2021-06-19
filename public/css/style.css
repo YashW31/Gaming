@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+body{
+    font-size: 2rem;
+    background-color: #021420;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.bg{
+    background-color: #021420;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #f2a70d;
+}
+
+img{
+    width: 100%;
+    display: inline-block;
+}
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.top{
+    opacity: 0;
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    color: #021420;
+    right: 4rem;
+    bottom: 5rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 6rem;
+    transition: 0.6s;
+    z-index: 1000;
+}
+
+.top.sticky{
+    opacity: 1;
+}
+
+.sticky-header{
+    opacity: 0;
+    top: 0;
+    position: fixed;
+    background-color: #021420;
+    transition: 0.6s;
+    width: 100%;
+    height: 5rem;
+    padding: 2.5rem 0 7.5rem 0;
+    z-index: 100;
+}
+
+
+.sticky-header.sticky{
+    opacity: 1;
+}
+
+/* ----------------HERO---------------- */
+
+.hero{
+    background:  url(../images/main.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.title{
+    height: 5rem;
+    width: auto;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+
+.nav-items{
+    margin: 0 2rem;
+    color: #fff;
+    font-size: 2.2rem;
+    align-items: center;
+}
+
+.nav-items:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logout{
+    font-size: 2.5rem;
+    margin-left: 35rem;
+    /* float: right; */
+}
+
+.hero-content{
+    text-align: center; 
+    /* padding: 30rem 20rem 44rem 20rem; */
+    /* margin: auto 0; */
+    /* display: grid;
+    place-items: center; */
+    /* color: #bfe9ff; */
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.open, .close{
+    display: none;
+}
+
+.hero-content h1{
+    font-size: 7rem;
+}
+
+.hero-content h4{
+    font-size: 3rem;
+}
